@@ -1,0 +1,24 @@
+
+package com.example.spring001.controller;
+
+import com.example.spring001.service.AlumnoService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+/**
+ *
+ * @author admin
+ */
+@Controller
+public class AlumnoController {
+    @Autowired
+    private AlumnoService alumnoService;
+    
+    @GetMapping
+    public String listarAlumno(Model model){
+        model.addAttribute("alumnos", alumnoService.readAll());
+        return "index";
+    } 
+}
