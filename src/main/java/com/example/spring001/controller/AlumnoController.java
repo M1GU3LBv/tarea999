@@ -13,6 +13,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @author admin
  */
 @Controller
+
+
+
+
 @RequestMapping("/alumno")
 public class AlumnoController {
     @Autowired

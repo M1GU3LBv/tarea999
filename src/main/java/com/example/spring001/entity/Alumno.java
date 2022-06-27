@@ -8,16 +8,19 @@ package com.example.spring001.entity;
 
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
+
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 /**
  *
  * @author admin
  */
-@Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Getter
+@Setter
 public class Alumno {
     private int idalumno;
     private String nombres;

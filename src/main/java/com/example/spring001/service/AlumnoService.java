@@ -12,9 +12,14 @@ import java.util.List;
  * @author admin
  */
 public interface AlumnoService {
+
     int create(Alumno alum);
+
     int update(Alumno alum);
+
     int delete(int id);
+
     Alumno read(int id);
+
     List<Alumno> readAll();
 }

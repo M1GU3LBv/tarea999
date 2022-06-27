@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/layout}" >
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     
+    </head>
+    <body>
+ <div class="container-fluid" layout:fragment="page-content">
+          <h1>Ventas</h1>  
+           <hr> 
+          <button class="btn btn-danger">Add</button>
+            <table class="table mt-4">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nombres</th>
+                        <th scope="col">Apellidos</th>
+                        <th scope="col">Teléfono</th>
+                        <th scope="col">Correo</th>
+                        <th scope="col">Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="tablita : ${tablita}">
+                        <th scope="row" th:text="${tablita.idventa+1}"></th>
+                        <td th:text="${tablita.sucursal}"></td>
+                        <td th:text="${tablita.vendedor}"></td>
+                        <td th:text="${tablita.cliente}"></td>
+                        <td th:text="${tablita.fecha}"></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+ </div>
+            
+            
+
+    </body>
+</html>
